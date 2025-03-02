@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+</head>
+<body>
+    <div class="register-page">
+        <h1>Register</h1>
+        <form method="post" class="register-form">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            
+            <!-- Username Field -->
+            <div class="form-group">
+                <label for="{{ form.username.id_for_label }}">Username:</label>
+                {{ form.username }}
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="{{ form.password1.id_for_label }}">Password:</label>
+                {{ form.password1 }}
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+                <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+                {{ form.password2 }}
+            </div>
+
+            <!-- Date of Birth Field -->
+            <div class="form-group">
+                <label for="{{ form.date_of_birth.id_for_label }}">Date of Birth (YYYY-MM-DD):</label>
+                {{ form.date_of_birth }}
+                <small class="form-text text-muted">Please enter your date of birth in the format YYYY-MM-DD.</small>
+            </div>
+
+            <button type="submit" class="register-button">Register</button>
+        </form>
+        <p class="login-link">
+            Already have an account? <a href="{% url 'login' %}">Login here</a>.
+        </p>
+    </div>
+</body>
+</html>

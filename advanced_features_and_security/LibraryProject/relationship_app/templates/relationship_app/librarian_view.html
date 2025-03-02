@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarian Page</title>
+    <!-- Link to the CSS file using the {% static %} tag -->
+    <link rel="stylesheet" type="text/css" href="{% static 'relationship_app/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Librarian Page!</h1>
+    </header>
+    <main>
+        <p>Only librarians can view this page. You're logged in as a Librarian.</p>
+    </main>
+    <footer>
+        <p>© 2024 Django Mock</p>
+    </footer>
+</body>
+</html>

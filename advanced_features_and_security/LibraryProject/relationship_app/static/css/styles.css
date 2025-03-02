@@ -1,0 +1,160 @@
+/* styles.css for relationship_app */
+
+/* Apply the same base font-family for consistency across apps */
+body {
+    font-family: 'Georgia', serif; /* Same as bookshelf_app */
+    background-color: #f7f7f7; /* Same background as bookshelf_app */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header similarly to bookshelf_app */
+header {
+    background-color: #4CAF50; /* Matches bookshelf_app's button color */
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-family: 'Merriweather', serif; /* Elegant serif font for headings */
+}
+
+/* Main content with padding and centered text */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Footer with complementary styling */
+footer {
+    background-color: #333; /* Dark footer background for contrast */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Link styling to match bookshelf_app's style */
+a {
+    color: #4CAF50; /* Matches header and button hover color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* List styles to match the clean, organized feel */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Paragraphs to match the softer text tone */
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Form and button styles (important for any forms in this app) */
+form {
+    max-width: 450px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+form:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff; /* Blue focus effect to match bookshelf_app input focus */
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
+
+/* Error and success message styling */
+.form-errors, .form-success {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-errors {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+}
+
+.form-success {
+    color: green;
+    background-color: #e6ffe6;
+    border: 1px solid #4dff4d;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form input, form textarea {
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 16px;
+    }
+}

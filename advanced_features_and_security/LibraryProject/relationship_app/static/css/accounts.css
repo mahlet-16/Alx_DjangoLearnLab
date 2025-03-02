@@ -1,0 +1,124 @@
+/* accounts.css */
+
+/* General styles for the accounts pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Style the form (common for login, register, and logout pages) */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 14px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Link styles (for Register, Logout links) */
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styles for the login page */
+.login-page {
+    text-align: center;
+}
+
+/* Additional styles for the register page */
+.register-page {
+    text-align: center;
+}
+
+/* Additional styles for the logout page */
+.logout-page {
+    text-align: center;
+    padding: 50px;
+}
+
+.logout-page p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Notification/Message Styles (success, error, etc.) */
+.message {
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive design: Make sure the form is responsive on smaller screens */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form input,
+    form button {
+        font-size: 14px;
+    }
+}

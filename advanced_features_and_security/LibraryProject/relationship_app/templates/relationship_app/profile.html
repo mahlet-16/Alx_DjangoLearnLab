@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <main>
+        <div class="profile-container">
+            {% if user.is_authenticated %}
+                <div class="profile-info">
+                    <p><strong>Welcome, {{ user.username }}!</strong></p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Date Joined:</strong> {{ user.date_joined|date:"Y-m-d" }}</p>
+
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="logout-button">Log Out</button>
+                    </form>
+                </div>
+            {% else %}
+                <p>You are not logged in. <a href="{% url 'login' %}" class="login-link">Click here to log in</a>.</p>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Relationship App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
