@@ -12,6 +12,9 @@ class RegisterView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     permission_classes = [permissions.AllowAny]
+    
+    "generics.GenericAPIView", "permissions.IsAuthenticated"
+    "Post.objects.filter(author__in=following_users).order_by", "following.all()"
 
 @api_view(['POST'])
 @permission_classes([permissions.IsAuthenticated])
